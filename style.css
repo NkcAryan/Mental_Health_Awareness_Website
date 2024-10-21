@@ -1,0 +1,2563 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap');
+
+
+:root {
+    --primary-color: rgb(59, 218, 59);
+    --accent-color: #3f83f8;
+    --text-color: #333333;
+    --link-color: #2563eb;
+    --background-color: #ffffff;
+    --light-gray: #f0f0f0;
+    --gray: #808080;
+    --dark-gray: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    text-align: center;
+    /* background-color: #F9FAFC; */
+    padding: 0.1rem;
+}
+
+.header {
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+    animation: slideFromTop 1s ease backwards;
+}
+
+.header_content {
+    max-width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    gap: 0.625rem;
+}
+
+.logo:hover {
+    color: var(--link-color);
+}
+
+.logo_icon {
+    height: 3.275rem;
+    width: 2.5rem;
+}
+
+.logo_text1 {
+    font-size: 1.25rem;
+}
+
+.nav {
+    display: none;
+    gap: 1rem;
+}
+
+.nav_link {
+    color: #718096;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transform: color 0.1s;
+    text-wrap: wrap;
+    text-align: center;
+    transition: all 0.7s;
+}
+
+.nav_link:hover {
+    color: var(--link-color);
+    scale: 1.05;
+}
+
+.contact_button_head {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact_button {
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact_button:hover {
+    background-color: #4afc61;
+}
+
+.menu_icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.menu_button {
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--background-color);
+    padding: 0.5rem 0.9rem;
+}
+
+/* .content{
+    row-gap: 2rem;
+} */
+
+.main_section {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.6rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.Content_left {
+    /* display: flex; */
+    text-align: center;
+    animation: slideFromLeft 1s ease forwards;
+    opacity: 0;
+}
+
+.section_label {
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.section_title {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.h2_first_class {
+    padding-bottom: 7px;
+    text-align: left;
+}
+
+.section_description {
+    color: rgb(39, 69, 240);
+    font-size: 1.15rem;
+    text-align: left;
+    padding-top: 0.5rem;
+}
+
+.button_group {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.start_button,
+.take_tour {
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.take_tour {
+    background-color: var(--dark-gray);
+}
+
+.start_button:hover {
+    background-color: #4afc61;
+}
+
+.take_tour:hover {
+    background-color: var(--gray);
+}
+
+.Content_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video_container {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 70vh;
+    width: 30vw;
+    animation: slideFromRight 1s ease backwards;
+}
+
+.section_video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.company_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2.8rem auto;
+    animation: slideFromLeft 1s ease forwards;
+    width: 50%;
+    margin-bottom: -0rem;
+}
+
+.company_title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.company_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+    padding: 1.8rem 2.5rem;
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: 0.725rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.company_logo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: bold;
+    font-weight: 500;
+    color: var(--gray);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pillars {
+    text-align: start;
+    text-decoration: var(--primary-color) underline;
+    font-size: 1.1rem;
+    height: 1.6rem;
+}
+
+.pillars_desc {
+    font-size: 0.9rem;
+    text-align: start;
+
+}
+
+.feature_container {
+    background-color: var(--light-gray);
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.feature_content {
+    max-width: 52.5%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main_title {
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+
+.main_description {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.feature_grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1.3rem;
+}
+
+.feature_card {
+    background-color: rgba(31, 29, 29, 0.973);
+    padding: 1.6rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    box-shadow: 12px 12px 10px 1px rgba(157, 186, 154, 0.75);
+    -webkit-box-shadow: 12px 12px 10px 1px rgba(157, 186, 154, 0.75);
+    -moz-box-shadow: 12px 12px 10px 1px rgba(157, 186, 154, 0.75);
+    transition: all 0.7s;
+}
+
+.feature_card:hover {
+    scale: 1.07;
+}
+
+.icon_container {
+    background-color: var(--background-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.feature_info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature_svg {
+    width: 1.9rem;
+    height: 1.9rem;
+}
+
+.feature_title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.feature_description {
+    color: white;
+}
+
+.feature_card:nth-child(1) {
+    background-color: #4a90e2;
+}
+
+.feature_card:nth-child(2) {
+    background-color: #ff6289;
+}
+
+.feature_card:nth-child(3) {
+    background-color: #fcbf58;
+}
+
+.feature_card:nth-child(4) {
+    background-color: #44bfc3;
+}
+
+.feature_card:nth-child(5) {
+    background-color: #77b05d;
+}
+
+.feature_card:nth-child(6) {
+    background-color: #7d78b1;
+}
+
+.testimonial_container {
+    border-radius: 1rem;
+    background-color: white;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    max-width: 65%;
+}
+
+.testimonial_content {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2rem;
+}
+
+.testimonial_title {
+    font-size: 1.65rem;
+    font-weight: bold;
+}
+
+.testimonial_grid {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+}
+
+.testimonial_card {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(129, 125, 125);
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4ox 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--link-color);
+}
+
+.testimonial_text {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.testimonial_avatar img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50px;
+}
+
+/* .testimonial_details{
+
+} */
+
+.testimonial_name {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.testimonial_desc {
+    font-size: 0.875rem;
+    color: #777;
+}
+
+.newsletter_container {
+    background-color: var(--background-color);
+    max-width: 75%;
+    height: 55vh;
+    margin: 0 auto;
+}
+
+.newsletter_content {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-gray);
+    height: 100%;
+    border-radius: 8px;
+}
+
+.newsletter_left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+.newsletter_left img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.newsletter_right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.newsletter_info {
+    padding: 0 3rem;
+}
+
+.newsletter_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.newsletter_desc {
+    text-align: left;
+    color: #777;
+}
+
+.newsletter_form {
+    padding: 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+}
+
+.newsletter_email {
+    background-color: var(--background-color);
+    /* width: 100%; */
+    color: #3333;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+.newsletter_email:focus {
+    border: 1px solid#2563eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter_send_button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.newsletter_send_button:hover {
+    background-color: var(--link-color);
+}
+
+.newsletter_privacy_policy {
+    padding: 0 3rem;
+    font-size: 0.76rem;
+    color: #777;
+    text-align: left;
+    margin-left: -1.5rem;
+}
+
+.newsletter_link {
+    text-decoration: underline;
+    color: #2563eb;
+}
+
+.footer_container {
+    background-color: var(--background-color);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 65%;
+    /* align-items: center; */
+}
+
+.footer {
+    max-width: 100%;
+    padding: 1.2rem 2.4rem;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.footer_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 0.75rem;
+}
+
+.company_logo_1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.28rem;
+    font-weight: bold;
+    color: black;
+}
+
+.logo_svg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.filler_text {
+    font-size: 1rem;
+    color: #777;
+}
+
+.social {
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* .social_link{
+
+}  */
+
+.social_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70%;
+    grid-gap: 5.67rem;
+    padding-top: 2rem;
+}
+
+/* .footer_gird_column{
+
+} */
+
+.footer_gird_column ul {
+    list-style-type: none;
+}
+
+.footer_grid_heading {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1.65rem;
+}
+
+.footer_links_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.footer_link {
+    color: #777;
+    font-size: 0.875rem;
+}
+
+.footer_link:hover {
+    color: var(--link-color);
+}
+
+.footer_copyright {
+    color: var(--gray);
+    font-size: 0.75rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+.sign_up_body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+}
+
+.sign_up_container {
+    box-shadow: 9px 12px 10px 2px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 9px 12px 10px 2px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 9px 12px 10px 2px rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+    font-size: 1rem;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Sign_up {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.username_lable {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.username_input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sign_up_button {
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sign_up_button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.strength {
+    margin-top: 5px;
+    font-size: 12px;
+    display: block;
+}
+
+#passwordStrength.weak {
+    color: red;
+}
+
+#passwordStrength.medium {
+    color: orange;
+}
+
+#passwordStrength.strong {
+    color: green;
+}
+
+#passwordStrength.very-strong {
+    color: darkgreen;
+}
+
+.newsletter_privacy_policy {
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0 5rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.newsletter_privacy_policy1 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0 5rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.newsletter_link {
+    text-decoration: underline;
+    color: #2563eb;
+}
+
+@media screen and (min-width: 1111px) {
+    .contact_button {
+        display: block;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .sign_up_container {
+        width: 22.7%;
+    }
+}
+
+@media screen and (max-width: 1111px) {
+    .menu_button {
+        display: block;
+    }
+}
+
+/* Educate Yourself page */
+
+.educate-yourself-statistics {
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 70%;
+    background-color: #ffffff;
+    border: 5px solid whitesmoke;
+    box-shadow: inset 0px 0px 20px 7px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5rem;
+}
+
+.educate-yourself-statistics .statistics {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 62px;
+    padding-top: 62px;
+}
+
+.educate-yourself-statistics .statistics div {
+    text-align: center;
+    font-size: 2.1rem;
+    padding-bottom: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.educate-yourself-statistics .statistics div:hover {
+    transform: scale(1.05);
+}
+
+.educate-yourself-statistics .statistics div span {
+    color: #39e429;
+}
+
+.educate-yourself-call-to-action {
+    background-color: #FF6347;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    margin-top: 32px;
+}
+
+hr {
+    box-shadow: 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.45);
+    background-color: #39e429;
+}
+
+/* Help Yourself page */
+
+#help-yourself-title {
+    background-color: white;
+    color: black;
+}
+
+#help-yourself-title div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 62px;
+    padding-bottom: 155px;
+    width: 75%;
+    color: black;
+}
+
+#help-yourself-looking-after-yourself,
+.main-header,
+.looking-after-description {
+    background-color: white;
+    text-align: center;
+    color: black;
+}
+
+#help-yourself-looking-after-yourself {
+    padding-bottom: 124px;
+}
+
+.main-header {
+    font-size: 30px;
+    padding-bottom: 62px;
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.looking-after-tip {
+    font-size: 25px;
+    padding-bottom: 32px;
+    color: #04ff26;
+}
+
+.looking-after-description {
+    font-size: 18px;
+    font-weight: 2rem;
+    padding-bottom: 50px;
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#help-yourself-looking-after-yourself img {
+    margin-right: auto;
+    margin-left: auto;
+    width: 55%;
+    height: auto;
+    border-radius: 5%;
+    margin-bottom: 100px;
+}
+
+#help-yourself-specific-disorders,
+#help-yourself-specific-disorders .main-header,
+#help-yourself-resources,
+#help-yourself-resources .main-header {
+    padding-top: 124px;
+    background-color: white;
+}
+
+#help-yourself-specific-disorders {
+    padding-bottom: 248px;
+    border-top: 2px solid black;
+
+}
+
+#help-yourself-specific-disorders .main-header,
+#help-yourself-resources .main-header {
+    color: black;
+    font-weight: 600;
+    padding-bottom: 0px;
+}
+
+.specific-disorder-header,
+.specific-disorder-tip {
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.specific-disorder-header {
+    color: #4afc61;
+    font-size: 32px;
+    padding-top: 124px;
+    padding-bottom: 32px;
+}
+
+.specific-disorder-tip {
+    color: black;
+    font-size: 24px;
+    padding-bottom: 24px;
+}
+
+#help-yourself-suicide-hotlines {
+    margin-top: -10rem;
+    background-color: white;
+    padding-bottom: 248px;
+}
+
+#help-yourself-suicide-hotlines .main-header {
+    padding-top: 248px;
+}
+
+.suicide-hotlines-body {
+    height: 500px;
+    width: 67%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow-y: scroll;
+    border: 5px solid #FF6347;
+    padding-bottom: 62px;
+}
+
+.suicide-hotlines-title {
+    font-size: 32px;
+    padding-top: 62px;
+    color: #FF6347;
+    font-weight: 600;
+}
+
+.suicide-hotlines-country {
+    color: white;
+    font-size: 24px;
+    padding-top: 62px;
+    font-weight: 500;
+}
+
+.suicide-hotlines-organization {
+    color: black;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.suicide-hotlines-link {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.suicide-hotlines-link a {
+    text-decoration: none;
+    padding-top: 5px;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.suicide-hotlines-phone,
+.suicide-hotlines-email {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.suicide-hotlines-phone a,
+.suicide-hotlines-email a {
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 5px;
+    letter-spacing: 1px;
+}
+
+.suicide-hotlines-phone a:hover,
+.suicide-hotlines-email a:hover {
+    text-decoration: none;
+}
+
+#help-yourself-resources {
+    border-top: 2px solid black;
+    padding-bottom: 96px;
+}
+
+.help-yourself-resources-videos {
+    margin-top: -32px;
+    padding-bottom: 96px;
+}
+
+.help-yourself-resources-videos iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 2%;
+    margin-top: 96px;
+}
+
+.help-yourself-resources-videos iframe {
+    width: 67%;
+    height: 480px;
+    border: none;
+}
+
+.help-yourself-resources-links {
+    padding-top: 62px;
+}
+
+.help-yourself-resources-links a {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    color: #49A4D5;
+    padding-bottom: 62px;
+    text-align: center;
+}
+
+.help-yourself-resources-links a:hover {
+    text-decoration: none;
+    color: #49A4D5;
+}
+
+.help-yourself-resources-links .fa-angle-right {
+    color: #49A4D5;
+    /* the color of the icon should match the color of the text */
+}
+
+.help-yourself-resources-title {
+    color: black;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Help Others page */
+
+.help-others-title {
+    padding: 7px;
+    width: 60%;
+    border: 1.35px solid #4afc61;
+    border-radius: 1rem;
+    margin: 7rem auto;
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+    background-color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 124px;
+}
+
+.help-others-title div {
+    width: 80%;
+    margin: auto;
+}
+
+.help-others-acquaintance-struggling {
+    margin-bottom: 0px;
+}
+
+.help-others-row-one,
+.help-others-row-two,
+.help-others-row-three,
+.help-others-row-four {
+    height: 300px;
+    /* margin-bottom: -30rem; */
+}
+
+.help-others-portion-left {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.help-others-portion-right {
+    float: right;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.portion-img {
+    overflow: hidden;
+    display: flex;
+    /* display:flex and align-items:center used to vertically align images into the center of the container */
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.portion-img img {
+    width: 75%;
+}
+
+.portion-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16px;
+    padding-bottom: 40px;
+}
+
+.portion-body {
+    font-size: 1.1rem;
+    width: 75%;
+    margin-top: -1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    overflow: hidden;
+}
+
+.help-others-big-image {
+    margin-bottom: 124px;
+}
+
+.help-others-big-image img {
+    width: 85%;
+    height: auto;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.help-others-tips {
+    margin-bottom: 62px;
+}
+
+.help-others-tips div {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 80px;
+}
+
+.help-others-tips a,
+.help-others-tips a:hover {
+    color: #4afc61;
+    text-decoration: none;
+}
+
+/* Spread the Word page */
+
+.spread-the-word-title {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: 62px;
+    font-weight: 600;
+    margin-top: 62px;
+    margin-bottom: 30px;
+}
+
+.spread-the-word-title div {
+    width: 75%;
+    padding-bottom: 94px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spread-the-word-title div span {
+    color: #4afc61;
+}
+
+.spread-the-word-full-image-white-to-black {
+    background: linear-gradient(#ffffff 50%, #030303 50%)
+}
+
+.spread-the-word-full-image-black-to-white {
+    background: linear-gradient(#030303 50%, #ffffff 50%)
+}
+
+.spread-the-word-full-image-white-to-black img,
+.spread-the-word-full-image-black-to-white img {
+    width: 85%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+}
+
+.talking-mental-health-reasons {
+    background-color: #030303;
+    text-align: center;
+    padding-bottom: 62px;
+}
+
+.talking-heading,
+.stigma-heading {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 600;
+    width: 67%;
+    padding-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.talking-point {
+    color: #4afc61;
+    font-size: 32px;
+    font-weight: 600;
+    width: 50%;
+    padding-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.talking-description {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    width: 50%;
+    padding-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ways-to-fight-stigma {
+    background-color: #030303;
+    text-align: center;
+    padding-bottom: 124px;
+}
+
+.stigma-tip {
+    font-size: 40px;
+    font-weight: 300;
+    width: 67%;
+    padding-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tip-white {
+    color: #ffffff;
+}
+
+.tip-orange {
+    color: #4afc61;
+}
+
+.world-mental-health-day {
+    text-align: center;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    margin-bottom: 62px;
+}
+
+.world-mental-health-day-heading {
+    font-size: 40px;
+    font-weight: 600;
+    width: 67%;
+    padding-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4afc61;
+}
+
+.world-mental-health-day-body {
+    font-size: 24px;
+    font-weight: 600;
+    width: 50%;
+    padding-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.suicide-prevention {
+    padding-top: 62px;
+    padding-bottom: 124px;
+    background-color: #030303;
+}
+
+.suicide-prevention-week {
+    text-align: center;
+}
+
+.suicide-week-heading {
+    font-size: 40px;
+    font-weight: 500;
+    color: #4afc61;
+    width: 67%;
+    padding-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.suicide-week-body {
+    font-size: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    width: 50%;
+    padding-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The overlay for pop-up navigation */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Dark overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.popup-nav .nav_link {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.popup-nav .close-nav {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hide the default nav and show the hamburger button only on smaller screens */
+@media (max-width: 1111px) {
+    .nav {
+        display: none;
+        /* Hide default nav */
+    }
+
+    .menu_button {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+/* Extra small devices (phones) */
+@media only screen and (max-width:717px) {
+    .help-others-title {
+        font-size: 32px;
+        margin-top: 32px;
+        margin-bottom: 62px;
+    }
+
+    .help-others-row-one,
+    .help-others-row-two,
+    .help-others-row-three,
+    .help-others-row-four {
+        height: auto;
+    }
+
+    .help-others-portion-left,
+    .help-others-portion-right {
+        float: none;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 62px;
+    }
+
+    .portion-img {
+        height: auto;
+        text-align: center;
+    }
+
+    .portion-img img {
+        width: 90%;
+    }
+
+    .portion-heading {
+        font-size: 18px;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 18px;
+    }
+
+    .portion-body {
+        font-size: 16px;
+        height: auto;
+    }
+
+    .help-others-big-image {
+        margin-bottom: 62px;
+    }
+
+    .help-others-big-image img {
+        width: 100%;
+        border-radius: 0%;
+    }
+
+    .help-others-tips {
+        margin-bottom: 32px;
+    }
+
+    .help-others-tips div {
+        font-size: 20px;
+        padding-bottom: 40px;
+    }
+
+    .spread-the-word-title {
+        font-size: 32px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .spread-the-word-title div {
+        padding-bottom: 32px;
+    }
+
+    .spread-the-word-full-image-black-to-white img,
+    .spread-the-word-full-image-white-to-black img {
+        width: 100%;
+        border-radius: 0%;
+    }
+
+    .talking-mental-health-reasons {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    .talking-heading,
+    .stigma-heading {
+        font-size: 20px;
+        padding-top: 32px;
+    }
+
+    .talking-point {
+        font-size: 18px;
+        padding-top: 32px;
+    }
+
+    .talking-description {
+        font-size: 16px;
+        padding-top: 18px;
+        width: 80%;
+    }
+
+    .ways-to-fight-stigma {
+        padding-top: 32px;
+        padding-bottom: 62px;
+    }
+
+    .stigma-tip {
+        font-size: 20px;
+        padding-top: 32px;
+        width: 75%;
+    }
+
+    .world-mental-health-day {
+        padding-top: 0px;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+    }
+
+    .world-mental-health-day-heading {
+        font-size: 20px;
+        padding-top: 32px;
+        width: 80%;
+    }
+
+    .world-mental-health-day-body {
+        font-size: 16px;
+        padding-top: 32px;
+        width: 75%;
+    }
+
+    .suicide-prevention {
+        padding-top: 0px;
+        padding-bottom: 62px;
+    }
+
+    .suicide-week-heading {
+        font-size: 20px;
+        padding-top: 32px;
+        width: 80%;
+    }
+
+    .suicide-week-body {
+        font-size: 16px;
+        padding-top: 32px;
+        width: 75%;
+    }
+}
+
+/* About page */
+/* Hero Section */
+.about-hero {
+    background-color: var(--primary-color);
+    padding: 4rem 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+
+.about-hero-content h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero-content p {
+    font-size: 1.35rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about-section {
+    max-width: 70%;
+    margin: 5rem auto;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 2.2rem;
+}
+
+.core-values {
+    list-style-type: none;
+    padding-left: 5rem;
+}
+
+.core-values li {
+    margin-bottom: 1.35rem;
+    font-size: 1.1rem;
+}
+
+/* Vision Section */
+.our-vision {
+    background-color: var(--light-gray);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.vision-content h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.vision-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+/* Hero Section */
+.start-now-hero {
+    background-color: var(--primary-color);
+    padding: 4rem 1rem;
+    text-align: center;
+    color: var(--background-color);
+}
+
+.start-now-content h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.start-now-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--background-color);
+}
+
+/* Booking Section */
+.booking-section {
+    background-color: var(--light-gray);
+    padding: 3rem 1rem;
+}
+
+.booking-form {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.booking-form h2 {
+    font-size: 1.85rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.booking-form label {
+    display: block;
+    font-size: 1.1rem;
+    text-align: start;
+    margin-bottom: 0.75rem;
+    color: var(--dark-gray);
+}
+
+.booking-form input,
+.booking-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.booking-form textarea {
+    resize: vertical;
+}
+
+.booking-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.booking-button:hover {
+    background-color: #4afc61;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    cursor: pointer;
+}
+
+.modal-message {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.quiz_container_body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 50rem;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+
+.quiz_heading {
+    text-align: center;
+    color: #4afc61;
+    padding: 1rem;
+}
+
+.quiz_paragraph {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.quiz-question {
+    margin-bottom: 1.5rem;
+}
+
+.quiz_questions {
+    color: #4afc61;
+    text-align: center;
+    padding: 1rem;
+}
+
+.quiz-question label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.quiz-question select,
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.submit-btn {
+    background-color: #3f83f8;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: black;
+}
+
+
+/* Small devices (Tablets and landscape phones) */
+@media only screen and (min-width:718px) and (max-width:992px) {
+    .help-others-title {
+        font-size: 45px;
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    .help-others-acquaintance-struggling {
+        margin-bottom: 600px;
+    }
+
+    .help-others-row-one,
+    .help-others-row-two,
+    .help-others-row-three,
+    .help-others-row-four {
+        height: 500px;
+    }
+
+    .help-others-portion-left,
+    .help-others-portion-right {
+        margin-bottom: 18px;
+    }
+
+    .portion-img {
+        height: 225px;
+        /* 45px times 5 = 225px */
+    }
+
+    .portion-heading {
+        font-size: 26px;
+        padding-top: 12px;
+        padding-bottom: 26px;
+    }
+
+    .portion-body {
+        font-size: 20px;
+        height: 275px;
+    }
+
+    .help-others-big-image {
+        margin-top: 45px;
+        margin-bottom: 90px;
+    }
+
+    .help-others-tips {
+        margin-bottom: 45px;
+    }
+
+    .help-others-tips div {
+        font-size: 30px;
+        padding-bottom: 60px;
+        width: 67%;
+    }
+
+    .spread-the-word-title {
+        font-size: 45px;
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    .spread-the-word-title div {
+        padding-bottom: 45px;
+    }
+
+    .talking-mental-health-reasons {
+        padding-bottom: 45px;
+    }
+
+    .talking-heading,
+    .stigma-heading {
+        font-size: 30px;
+        padding-top: 45px;
+    }
+
+    .talking-point {
+        font-size: 26px;
+        padding-top: 45px;
+    }
+
+    .talking-description {
+        font-size: 20px;
+        padding-top: 26px;
+        width: 60%;
+    }
+
+    .ways-to-fight-stigma {
+        padding-bottom: 90px;
+    }
+
+    .stigma-tip {
+        font-size: 30px;
+        padding-top: 45px;
+    }
+
+    .world-mental-health-day {
+        padding-top: 0px;
+        padding-bottom: 45px;
+        margin-bottom: 45px;
+    }
+
+    .world-mental-health-day-heading {
+        font-size: 30px;
+        padding-top: 45px;
+    }
+
+    .world-mental-health-day-body {
+        font-size: 20px;
+        padding-top: 45px;
+    }
+
+    .suicide-prevention {
+        padding-top: 0px;
+        padding-bottom: 45px;
+    }
+
+    .suicide-week-heading {
+        font-size: 30px;
+        padding-top: 45px;
+    }
+
+    .suicide-week-body {
+        font-size: 20px;
+        padding-top: 45px;
+    }
+}
+
+/* Large devices (Large desktops and laptops) */
+@media only screen and (min-width: 1824px) {
+    .help-others-title div {
+        width: 60%;
+    }
+
+    .help-others-acquaintance-struggling {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .help-others-big-image {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .help-others-tips {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .spread-the-word-title div,
+    .talking-heading,
+    .stigma-heading,
+    .suicide-week-heading {
+        width: 60%;
+    }
+
+    .spread-the-word-full-image-black-to-white img,
+    .spread-the-word-full-image-white-to-black img,
+    .talking-point,
+    .talking-description,
+    .world-mental-health-day-heading {
+        width: 40%;
+    }
+
+    .stigma-tip,
+    .shop-heading {
+        width: 50%;
+    }
+
+    .world-mental-health-day-body,
+    .suicide-week-body {
+        width: 30%;
+    }
+}
+
+/* Extra small devices (phones) */
+@media only screen and (max-width:717px) {
+    #help-yourself-title div {
+        font-size: 32px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
+    #help-yourself-looking-after-yourself {
+        padding-bottom: 62px;
+    }
+
+    .main-header {
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+
+    .looking-after-tip {
+        font-size: 18px;
+        padding-bottom: 18px;
+    }
+
+    .looking-after-description {
+        font-size: 16px;
+        padding-bottom: 62px;
+    }
+
+    #help-yourself-looking-after-yourself img {
+        margin-bottom: 62px;
+    }
+
+    #help-yourself-specific-disorders,
+    #help-yourself-specific-disorders .main-header,
+    #help-yourself-resources .main-header {
+        padding-top: 62px;
+    }
+
+    #help-yourself-specific-disorders {
+        padding-bottom: 62px;
+    }
+
+    .specific-disorder-header,
+    .specific-disorder-tip {
+        width: 50%;
+    }
+
+    .specific-disorder-header {
+        font-size: 18px;
+        padding-top: 30px;
+        padding-bottom: 18px;
+    }
+
+    .specific-disorder-tip {
+        font-size: 16px;
+        padding-bottom: 16px;
+    }
+
+    #help-yourself-suicide-hotlines {
+        padding-bottom: 62px;
+    }
+
+    #help-yourself-suicide-hotlines .main-header {
+        padding-top: 62px;
+    }
+
+    .suicide-hotlines-body {
+        height: 300px;
+        margin-top: 30px;
+        width: 80%;
+        border: 2px solid #FF6347;
+    }
+
+    .suicide-hotlines-title {
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    .suicide-hotlines-country {
+        font-size: 16px;
+        padding-top: 30px;
+    }
+
+    .suicide-hotlines-organization {
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+    .suicide-hotlines-link,
+    .suicide-hotlines-phone,
+    .suicide-hotlines-email {
+        width: 50%;
+    }
+
+    .suicide-hotlines-link a,
+    .suicide-hotlines-phone a,
+    .suicide-hotlines-email a {
+        padding-top: 3px;
+        font-size: 10px;
+        word-wrap: break-word;
+        letter-spacing: 0px;
+    }
+
+    #help-yourself-resources {
+        padding-bottom: 20px;
+        padding-top: 0px;
+    }
+
+    .help-yourself-resources-videos {
+        padding-bottom: 0px;
+    }
+
+    .help-yourself-resources-videos iframe {
+        margin-top: 30px;
+        height: 200px;
+    }
+
+    #media-display-none {
+        display: none;
+    }
+
+    .help-yourself-resources-links {
+        padding-bottom: 30px;
+    }
+
+    #mobile-special-padding {
+        /* for unidentified reasons the top- and bottom-padding for the "External Links" title was off */
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: -10px;
+        margin-bottom: -30px;
+    }
+
+    .help-yourself-resources-links a {
+        font-size: 16px;
+        padding-bottom: 30px;
+    }
+}
+
+/* Small devices (Tablets and landscape phones) */
+@media only screen and (min-width:718px) and (max-width:992px) {
+    #help-yourself-title div {
+        font-size: 45px;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    #help-yourself-looking-after-yourself {
+        padding-bottom: 45px;
+    }
+
+    .main-header {
+        font-size: 30px;
+        padding-bottom: 45px;
+    }
+
+    .looking-after-tip {
+        font-size: 26px;
+        padding-bottom: 26px;
+    }
+
+    .looking-after-description {
+        font-size: 18px;
+        padding-bottom: 40px;
+    }
+
+    #help-yourself-looking-after-yourself img {
+        margin-bottom: 90px;
+    }
+
+    #help-yourself-specific-disorders {
+        padding-top: 45px;
+    }
+
+    #help-yourself-specific-disorders .main-header,
+    #help-yourself-resources .main-header {
+        padding-top: 45px;
+    }
+
+    #help-yourself-specific-disorders {
+        padding-bottom: 90px;
+    }
+
+    .specific-disorder-header,
+    .specific-disorder-tip {
+        width: 50%;
+    }
+
+    .specific-disorder-header {
+        font-size: 26px;
+        padding-bottom: 26px;
+        padding-top: 45px;
+    }
+
+    .specific-disorder-tip {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    #help-yourself-suicide-hotlines {
+        padding-bottom: 90px;
+    }
+
+    #help-yourself-suicide-hotlines .main-header {
+        padding-top: 90px;
+    }
+
+    .suicide-hotlines-body {
+        height: 400px;
+        margin-top: 45px;
+        width: 75%;
+        border: 2px solid #FF6347;
+    }
+
+    .suicide-hotlines-title {
+        font-size: 26px;
+        padding-top: 30px;
+    }
+
+    .suicide-hotlines-country {
+        font-size: 20px;
+        padding-top: 45px;
+    }
+
+    .suicide-hotlines-organization {
+        font-size: 18px;
+        padding-bottom: 0px;
+        padding-top: 30px;
+    }
+
+    .suicide-hotlines-email,
+    .suicide-hotlines-link,
+    .suicide-hotlines-phone {
+        padding-top: 5px;
+        width: 50%;
+    }
+
+    .suicide-hotlines-email a,
+    .suicide-hotlines-link a,
+    .suicide-hotlines-phone a {
+        font-size: 16px;
+        letter-spacing: 0px;
+        word-wrap: break-word;
+    }
+
+    #help-yourself-resources {
+        padding-bottom: 30px;
+        padding-top: 45px;
+    }
+
+    .help-yourself-resources-videos {
+        padding-bottom: 0px;
+    }
+
+    .help-yourself-resources-videos iframe {
+        margin-top: 45px;
+        height: 400px;
+    }
+
+    #media-display-none {
+        display: none;
+    }
+
+    .help-yourself-resources-links {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .help-yourself-resources-links a {
+        font-size: 20px;
+        padding-bottom: 45px;
+    }
+}
+
+/* Medium devices (Large tablets and small laptops) */
+@media only screen and (min-width:993px) and (max-width:1310px) {
+    #help-yourself-title div {
+        padding-bottom: 62px;
+    }
+
+    #help-yourself-looking-after-yourself {
+        padding-bottom: 62px;
+    }
+
+    #help-yourself-specific-disorders {
+        padding-top: 0px;
+        padding-bottom: 124px;
+    }
+
+    #help-yourself-suicide-hotlines {
+        padding-bottom: 124px;
+    }
+
+    #help-yourself-suicide-hotlines .main-header {
+        padding-top: 124px;
+    }
+
+    #help-yourself-resources {
+        padding-bottom: 62px;
+    }
+
+    #help-yourself-resources .main-header {
+        padding-top: 0px;
+    }
+
+    .help-yourself-resources-videos {
+        padding-bottom: 0px;
+    }
+
+    #media-display-none {
+        display: none;
+    }
+}
+
+/* Large devices (Large desktops and laptops) */
+@media only screen and (min-width: 1824px) {
+
+    #help-yourself-title div,
+    .main-header {
+        width: 50%;
+    }
+
+    #help-yourself-title div {
+        padding-bottom: 62px;
+    }
+
+    #help-yourself-suicide-hotlines .main-header {
+        padding-top: 124px;
+    }
+
+    .looking-after-description,
+    #help-yourself-looking-after-yourself img {
+        width: 40%;
+    }
+
+    #help-yourself-looking-after-yourself {
+        padding-bottom: 62px;
+    }
+
+    #help-yourself-specific-disorders,
+    #help-yourself-specific-disorders .main-header,
+    #help-yourself-resources,
+    #help-yourself-resources .main-header {
+        padding-top: 62px;
+    }
+
+    #help-yourself-specific-disorders {
+        padding-bottom: 124px;
+    }
+
+    .specific-disorder-header,
+    .specific-disorder-tip {
+        width: 25%;
+    }
+
+    .suicide-hotlines-body {
+        height: 1000px;
+    }
+
+    .help-yourself-resources-videos iframe {
+        height: 750px;
+        width: 65%;
+    }
+
+    .help-yourself-resources-links a {
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1111px) {
+    .contact_button {
+        display: block;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .main_section {
+        flex-direction: row;
+    }
+
+    .Content_left {
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .section_title {
+        padding-left: 0;
+        font-size: 3.25rem;
+    }
+
+    .button_group {
+        justify-content: start;
+        padding-left: 0;
+    }
+
+    .section_label {
+        font-size: 1.3rem;
+    }
+
+    .image_container {
+        height: 67vh;
+    }
+
+    .section_description {
+        text-align: left;
+        font-size: 1rem;
+        color: rgb(15, 15, 241);
+        width: 80%;
+    }
+
+    .commpany_grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .newsletter_left {
+        display: block;
+        width: 100%;
+    }
+
+    .newsletter_container {
+        padding: 2rem;
+
+    }
+
+    .newsletter_title {
+        font-size: 2.5rem;
+
+    }
+}
+
+@media screen and (max-width: 1111px) {
+    .menu_button {
+        display: block;
+    }
+
+    .feature_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .footer_top {
+        padding-left: 10rem;
+    }
+
+    .footer_grid {
+        /* align-self: center; */
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .footer_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer_top {
+        padding-left: 1rem;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

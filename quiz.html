@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <header class="header_content">
+            <a href="/index.html" class="logo">
+                <img class="logo_icon" src="/Images/Mental Health Awareness Favicon.png" alt="Logo">
+                <span class="logo_text1">Mental Health Awareness</span>
+            </a>
+
+            <nav class="nav">
+                <a href="/index.html" class="nav_link">Home</a>
+                <a href="/educate-yourself.html" class="nav_link">Educate Yourself</a>
+                <a href="/help-yourself.html" class="nav_link">Help Yourself</a>
+                <a href="/help-others.html" class="nav_link">Help Others</a>
+                <a href="/spread-the-world.html" class="nav_link">Spread the Word</a>
+            </nav>
+
+            <div class="contact_button_head">
+                <a href="/sign-up.html" class="contact_button">
+                    Sign Up
+                </a>
+                <a href="/sign-in.html" class="contact_button">
+                    Log In
+                </a>
+            </div>
+
+            <button class="menu_button" type="button">
+                <img src="/Images/Hamburger.svg" alt=menu_button" class="menu_icon">
+            </button>
+        </header>
+    </div>
+
+    <div class="quiz-container">
+        <h1 class="quiz_heading">Mental Health Quiz</h1>
+        <p class="quiz_paragraph">Share your thoughts and feelings by answering the following questions:</p>
+        <form id="quizForm">
+            <div class="quiz-question">
+                <label for="Name">Enter Your Name: </label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="quiz-question">
+                <label for="number">Enter Your Number: </label>
+                <input type="number" id="number" name="number">
+            </div>
+
+            <div class="quiz-question">
+                <label for="email">Enter Your Email: </label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <h2 class="quiz_questions">Mental Health Questions</h2>
+
+            <div class="quiz-question">
+                <label>1. How often do you feel overwhelmed by everyday tasks?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>2. How would you rate your sleep quality recently?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Very Poor">Very Poor</option>
+                    <option value="Poor">Poor</option>
+                    <option value="Average">Average</option>
+                    <option value="Good">Good</option>
+                    <option value="Excellent">Excellent</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>3. How often do you experience feelings of sadness or hopelessness?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>4. Do you have difficulty concentrating or focusing?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>5. How often do you feel anxious or worried?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>6. How often do you feel tired or fatigued despite having enough sleep?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>7. Do you find it difficult to enjoy activities you used to like?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>8. How often do you feel isolated or lonely?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>9. Do you have trouble relaxing or calming your mind?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>10. How often do you feel irritable or frustrated?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>11. Do you find yourself avoiding social interactions?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>12. How often do you experience sudden mood changes?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>13. How often do you feel like you are not good enough?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>14. Do you find yourself dwelling on negative thoughts?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>15. How often do you feel disconnected from your surroundings?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>16. How would you rate your ability to manage stress?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Very Poor">Very Poor</option>
+                    <option value="Poor">Poor</option>
+                    <option value="Average">Average</option>
+                    <option value="Good">Good</option>
+                    <option value="Excellent">Excellent</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>17. Do you feel like you lack purpose or direction in life?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>18. How often do you feel hopeless about the future?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>19. How often do you feel physically tense or restless?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>20. Do you struggle with maintaining a healthy appetite?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>21. How often do you feel like life is not worth living?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>22. How often do you find yourself feeling emotionally numb?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>23. Do you feel disconnected from your loved ones?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>24. How often do you feel like you are not in control of your emotions?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Never">Never</option>
+                    <option value="Sometimes">Sometimes</option>
+                    <option value="Often">Often</option>
+                    <option value="Always">Always</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label>25. How would you rate your current level of happiness or satisfaction with life?</label>
+                <select required>
+                    <option value="">Select an option</option>
+                    <option value="Very Unhappy">Very Unhappy</option>
+                    <option value="Unhappy">Unhappy</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Very Happy">Very Happy</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Modal for thank-you message -->
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p>Thank you for completing the quiz! Your responses will help us better understand your mental health needs.</p>
+        </div>
+    </div>
+
+    <div class="footer_container">
+        <footer class="footer">
+
+            <div class="footer_top">
+                <div class="company_logo_1">
+                    <a href="#logo_link" class="logo_link">
+                        <img class="logo_svg" src="Images/Mental Health Awareness Favicon.png" alt="">
+                        Mental Health awareness
+                    </a>
+                </div>
+
+                <p class="filler_text">
+                    Seamless Learning for Brighter Futures.
+                </p>
+
+                <div class="social">
+                    <a class="social_link" href="#instragram">
+                        <img class="social_icon" src="Images/instagram.svg" alt="">
+                    </a>
+                    <a class="social_link" href="#linkendin">
+                        <img class="social_icon" src="Images/linkedin.svg" alt="">
+                    </a>
+                    <a class="social_link" href="#microsoft">
+                        <img class="social_icon" src="Images/Microsoft.svg" alt="">
+                    </a>
+                    <a class="social_link" href="#twitter">
+                        <img class="social_icon" src="Images/twitter.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer_grid">
+                <!-- column 1 -->
+                <div class="footer_gird_column">
+                    <div class="footer_grid_heading">
+                        For You
+                    </div>
+
+                    <ul class="footer_links_list">
+                        <li>
+                            <a class="footer_link" href="#overview">Overview</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#solutions">Solutons</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#customers">Customers</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer_gird_column">
+                    <div class="footer_grid_heading">
+                        Get Help
+                    </div>
+
+                    <ul class="footer_links_list">
+                        <li>
+                            <a class="footer_link" href="#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#documentation">Documentation</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#chat">Chat</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer_gird_column">
+                    <div class="footer_grid_heading">
+                        About Us
+                    </div>
+
+                    <ul class="footer_links_list">
+                        <li>
+                            <a class="footer_link" href="#terms_of_policy">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#privacy_policy">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="#cooking_setting">Cookie Setting</a>
+                        </li>
+                        <li>
+                            <a class="footer_link" href="/about.html">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+
+        <div class="footer_copyright">
+            &copy; 2024 - Present Mental Health Awareness. All right reserved.
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navOverlay = document.createElement('div'); // Create an overlay for the nav
+            navOverlay.classList.add('nav-overlay');
+            document.body.appendChild(navOverlay);
+
+            const menuButton = document.querySelector('.menu_button');
+            const navContent = `
+        <nav class="popup-nav">
+            <a href="/index.html" class="nav_link">Home</a>
+            <a href="/educate-yourself.html" class="nav_link">Educate Yourself</a>
+            <a href="/help-yourself.html" class="nav_link">Help Yourself</a>
+            <a href="/help-others.html" class="nav_link">Help Others</a>
+            <a href="/spread-the-world.html" class="nav_link">Spread the Word</a>
+            <button class="close-nav">&times;</button>
+        </nav>
+    `;
+            navOverlay.innerHTML = navContent;
+
+            const closeNavButton = document.querySelector('.close-nav');
+
+            // Function to check screen width
+            function checkScreenWidth() {
+                if (window.innerWidth < 1111) {
+                    document.querySelector('.nav').style.display = 'none'; // Hide default nav
+                    menuButton.style.display = 'block'; // Show hamburger menu
+                } else {
+                    document.querySelector('.nav').style.display = 'flex'; // Show default nav
+                    menuButton.style.display = 'none'; // Hide hamburger menu
+                    navOverlay.style.display = 'none'; // Hide popup nav
+                }
+            }
+
+            // Event listener for hamburger button to show the overlay
+            menuButton.addEventListener('click', function () {
+                navOverlay.style.display = 'flex'; // Show overlay
+            });
+
+            // Close the overlay when close button is clicked
+            document.querySelector('.close-nav').addEventListener('click', function () {
+                navOverlay.style.display = 'none';
+            });
+
+            // Hide the popup when the screen resizes back to larger than 1111px
+            window.addEventListener('resize', checkScreenWidth);
+            checkScreenWidth(); // Initial check on page load
+        });
+    </script>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const modal = document.getElementById('thankYouModal');
+            modal.style.display = 'block';
+        });
+
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('thankYouModal').style.display = 'none';
+        });
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('thankYouModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
